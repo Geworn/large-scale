@@ -1,6 +1,6 @@
 import { SerialPort } from "serialport";
 
-const serialport = new SerialPort({ path: "/dev/ttyUSB0", baudRate: 115200 });
+const serialport = new SerialPort({ path: "COM7", baudRate: 115200 });
 
 async function main() {
   while (true) {

@@ -5,7 +5,11 @@ import { createServer } from "node:http";
 
 const app = express();
 const server = createServer(app);
-const io = new Server(server);
+const io = new Server(server , {
+  cors : {
+    origin : "*"
+  }
+});
 
 const serialport = new SerialPort({ path: "/dev/ttyUSB0", baudRate: 115200 });
 

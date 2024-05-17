@@ -1,8 +1,13 @@
+/**
+ * Pizza delivery prompt example
+ * run example by writing `node pizza.js` in your console
+ */
+
+import inquirer from "inquirer";
 import { SerialPort } from "serialport";
 
-async function findPort() {
-    const portsList = await SerialPort.list()
-    console.log(portsList)
-}
+const portsList = SerialPort.list();
 
-findPort()
+console.log("Hi, welcome to Node Pizza");
+
+portsList.then(console.log)

@@ -18,7 +18,7 @@ function handleSocketConnections() {
     console.log('a user connected');
 
     const sendRandomWeightData = () => {
-      const weight = parseFloat((9200).toFixed(2))
+      const weight = parseFloat((18500).toFixed(2))
       console.log({weight , time : Date.now()});
       socket.emit('weight', {weight , time : Date.now()});
     };
